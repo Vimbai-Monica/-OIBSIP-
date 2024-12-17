@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Pastimes is your go-to online store for high-quality branded used clothing, offering top-notch fashion at affordable prices.">
+    <meta name="keywords"
+        content="clothing store, online shopping, used clothing, affordable fashion, Pastimes, fashion">
+    <meta name="revisit" content="30 days">
+    <meta http-equiv="refresh" content="30">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Pastimes Landing Page</title>
+    <link rel="stylesheet" href="css/lightbox.css" media="screen" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="javascript/jquery-1.10.2.min.js"></script>
+    <script src="javascript/lightbox-2.6.min.js"></script>
+    <script src="javascript/modernizr.custom.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="_images/pastimes_logo.png" alt="Pastimes Logo">
+            </div>
+            <nav>
+                <a href="#about-us">About Us </a>
+                <a href="#products">Products</a>
+                <a href="#contact-us">Contact Us</a>
+            </nav>
+
+            <div class="search-container">
+                <input type="text" placeholder="Search for items..." class="search-bar" id="search-input">
+                <button class="search-button" id="search-button">Search</button>
+            </div>
+            <script>
+                document.getElementById('search-button').addEventListener('click', function () {
+                    const query = document.getElementById('search-input').value;
+                    if (query) {
+                        
+                        alert('Searching for: ' + query);
+                    } else {
+                        alert('Please enter a search term.');
+                    }
+                });
+
+                document.getElementById('search-input').addEventListener('keypress', function (event) {
+                    if (event.key === 'Enter') {
+                        document.getElementById('search-button').click();
+                    }
+                });
+            </script>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Welcome to Pastimes</h2>
+            <p>Discover high-quality, branded, pre-loved clothing at unbeatable prices. Join us in revolutionizing the
+                fashion industry, one piece at a time.</p>
+            <button class="btn">Get Started</button>
+        </div>
+
+    </section>
+
+    <section id="products">
+
+        <!-- Featured Section -->
+        <section id="featured-products">
+            <h3>Featured Products</h3>
+            <div class="product-section">
+                <div class="product-item">
+                    <a href="_images/womens_suite.webp" data-lightbox="product-gallery" data-title="Womens Formal Wear">
+                        <img src="_images/womens_suite.webp" alt="Womens Formal Wear" class="product-image">
+                    </a>
+
+                    </a>
+                    <p class="product-name">Womens Formal Wear</p>
+                    <p class="product-price">R368.75</p>
+                    <p class="product-condition">Condition: Used - Excellent</p>
+                    <p class="product-description">Womens Elegant Lapel Collar Long Sleeve Blazer and Pants Suit Set
+                    </p>
+                    <label for="color-select-1">Choose a color:</label>
+                    <select id="color-select-1">
+                        <option>Blue</option>
+                        <option>Black</option>
+                        <option>White</option>
+                    </select>
+                    <label for="size-select-1">Choose a size:</label>
+                    <select id="size-select-1">
+                        <option>XS</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                    </select>
+                    <button class="add-to-cart" onclick="addToCart('Womens Formal Wear')">Add to Cart</button>
+                    <button class="add-to-wishlist" onclick="addToWishlist('Womens Formal Wear')">Add to
+                        Wishlist</button>
+                    <button class="show-cart" onclick="showcart()">Show Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <a href="_images/womens_sneakers.webp" data-lightbox="product-gallery"
+                        data-title="Womens Formal Wear"></a>>
+                    <img src="_images/womens_sneakers.webp" alt="Comfortable Designer Sneakers" class="product-image">
+                    </a>
+                    <p class="product-name">Comfortable Designer Sneakers</p>
+                    <p class="product-price">R360</p>
+                    <p class="product-condition">Condition: Like New</p>
+                    <p class="product-description">Womens Platform Sneakers, Casual Lace Up Outdoor Shoes, Comfortable
+                        Low Top Sport Shoes</p>
+                    <label for="color-select-1">Choose a color:</label>
+                    <select id="color-select-1">
+                        <option>Black</option>
+                        <option>White</option>
+                        <option>Pink</option>
+                        <option>Red</option>
+                        <option>Green</option>
+                    </select>
+                    <label for="size-select-1">Choose a size:</label>
+                    <select id="size-select-1">
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                    <button class="add-to-cart" onclick="addToCart('Comfortable Designer Sneakers')">Add to
+                        Cart</button>
+                    <button class="add-to-wishlist" onclick="addToWishlist('Comfortable Designer Sneakers')">Add to
+                        Wishlist</button>
+                    <button class="show-cart" onclick="showcart()">Show Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <a href="_images/mens_suite.webp" data-lightbox="product-gallery" data-title="Womens Formal Wear">
+                        <img src="_images/mens_suite.webp" alt="Mens Formal Suite" class="product-image">
+                    </a>
+                    <p class="product-name">Mens Formal Suite</p>
+                    <p class="product-price">R550</p>
+                    <p class="product-condition">Condition: Used - Good</p>
+                    <p class="product-description">3-Piece Mens Classic Solid Dress Suit Set</p>
+                    <label for="color-select-2">Choose a color:</label>
+                    <select id="color-select-2">
+                        <option>Blue</option>
+                        <option>Black</option>
+                        <option>Grey</option>
+                        <option>White</option>
+                    </select>
+                    <label for="size-select-2">Choose a size:</label>
+                    <select id="size-select-2">
+                        <option>XS</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                    </select>
+                    <button class="add-to-cart" onclick="addToCart('Mens Formal Suite')">Add to Cart</button>
+                    <button class="add-to-wishlist" onclick="addToWishlist('Mens Formal Suite')">Add to
+                        Wishlist</button>
+                    <button class="show-cart" onclick="showcart()">Show Cart</button>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- Newly Listed Section -->
+        <section id="newly-listed-products">
+            <h3>Newly Listed</h3>
+            <div class="product-section">
+                <div class="product-item">
+                    <a href="_images/jacket.webp" data-lightbox="product-gallery" data-title="Womens Formal Wear">
+                        <img src="_images/jacket.webp" alt="Womens Jacket" class="product-image">
+                    </a>
+                    <p class="product-name">Womens Jacket</p>
+                    <p class="product-price">R435</p>
+                    <p class="product-condition">Condition: Used - Excellent</p>
+                    <p class="product-description">Jil Sander Uniqlo Wool Light Brown Multipocket Womens Coat</p>
+                    <label for="color-select-2">Choose a color:</label>
+                    <select id="color-select-2">
+                        <option>Grey</option>
+                        <option>Red</option>
+                        <option>Blue</option>
+                        <option>Black</option>
+                        <option>White</option>
+                    </select>
+                    <label for="size-select-2">Choose a size:</label>
+                    <select id="size-select-2">
+                        <option>XS</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                    </select>
+                    <button class="add-to-cart" onclick="addToCart('Womens Jacket')">Add to Cart</button>
+                    <button class="add-to-wishlist" onclick="addToWishlist('Womens Jacket')">Add to
+                        Wishlist</button>
+                    <button class="show-cart" onclick="showcart()">Show Cart</button>
+                </div>
+                <div class="product-item">
+                    <a href="_images/gucci_cap.webp " data-lightbox="product-gallery" data-title="Womens Formal Wear">
+                        <img src="_images/gucci_cap.webp" alt="Comfortable Designer Cap" class="product-image">
+                    </a>
+                    <p class="product-name">Comfortable Designer Cap</p>
+                    <p class="product-price">R259</p>
+                    <p class="product-condition">Condition: Like New</p>
+                    <p class="product-description">Vintage Gucci Monogram Brown Cap Hat</p>
+                    <label for="color-select-3">Choose a color:</label>
+                    <select id="color-select-3">
+                        <option>Brown</option>
+                        <option>Black</option>
+                        <option>White</option>
+                    </select>
+                    <label for="size-select-3">Choose a size:</label>
+                    <select id="size-select-3">
+                        <option>One Size</option>
+                    </select>
+                    <button class="add-to-cart" onclick="addToCart('Comfortable Designer Cap')">Add to Cart</button>
+                    <button class="add-to-wishlist" onclick="addToWishlist('Comfortable Designer Cap')">Add to
+                        Wishlist</button>
+                    <button class="show-cart" onclick="showcart()">Show Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <a href="_images/childrens_blouse.webp" data-lightbox="product-gallery"
+                        data-title="Womens Formal Wear">
+                        <img src="_images/childrens_blouse.webp" alt="Fashion Cartoon Girl Graphic Print"
+                            class="product-image">
+                    </a>
+                    <p class="product-name">Fashion Cartoon Girl Graphic Print</p>
+                    <p class="product-price">R124</p>
+                    <p class="product-condition">Condition: Used - Average</p>
+                    <p class="product-description">Fashion Cartoon Girl Graphic Print, Casual Comfy Round Neck Long
+                        Sleeve Sweatshirt for Daily and Outdoor Wear</p>
+                    <label for="color-select-4">Choose a color:</label>
+                    <select id="color-select-4">
+                        <option>Pink</option>
+                        <option>Brown</option>
+                        <option>Black</option>
+                        <option>Grey</option>
+                        <option>Red</option>
+                        <option>Blue</option>
+                        <option>White</option>
+                    </select>
+                    <label for="size-select-4">Choose a size:</label>
+                    <select id="size-select-4">
+                        <option>XXS</option>
+                        <option>XS</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <button class="add-to-cart" onclick="addToCart('Fashion Cartoon Girl Graphic Print')">Add to
+                        Cart</button>
+                    <button class="add-to-wishlist" onclick="addToWishlist('Fashion Cartoon Girl Graphic Print')">Add to
+                        Wishlist</button>
+                    <button class="show-cart" onclick="showcart()">Show Cart</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Staff Picks Section -->
+        <section id="staff-picks">
+            <h3>Staff Picks</h3>
+            <div class="product-section">
+                <div class="product-item">
+                    <a href="_images/jean.jpeg" data-lightbox="product-gallery" data-title="Womens Formal Wear">
+                        <img src="_images/jean.jpeg" alt="Mens Jean" class="product-image">
+                    </a>
+                    <p class="product-name">Mens Jean</p>
+                    <p class="product-price">R324</p>
+                    <p class="product-condition">Condition: Used - Excellent</p>
+                    <p class="product-description">George Mens Regular Fit Jean</p>
+                    <label for="color-select-3">Choose a color:</label>
+                    <select id="color-select-3">
+                        <option>Blue</option>
+                        <option>Grey</option>
+                        <option>Black</option>
+                    </select>
+                    <label for="size-select-3">Choose a size:</label>
+                    <select id="size-select-3">
+                        <option>XS</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                    </select>
+                    <button class="add-to-cart" onclick="addToCart('Mens Jean')">Add to Cart</button>
+                    <button class="add-to-wishlist" onclick="addToWishlist('Mens Jean')">Add to Wishlist</button>
+                    <button class="show-cart" onclick="showcart()">Show Cart</button>
+                </div>
+                <div class="product-item">
+                    <a href="_images/socks.jpeg" data-lightbox="product-gallery" data-title="Womens Formal Wear">
+                        <img src="_images/socks.jpeg" alt="Comfortable and Warm Socks" class="product-image">
+                    </a>
+                    <p class="product-name">Comfortable and Warm Socks</p>
+                    <p class="product-price">R50</p>
+                    <p class="product-condition">Condition: Like New</p>
+                    <p class="product-description">Wear weird-crazy socks for a good cause!</p>
+                    <label for="color-select-5">Choose a color:</label>
+                    <select id="color-select-5">
+                        <option>Brown</option>
+                        <option>Black</option>
+                        <option>White</option>
+                        <option>Multi-colored</option>
+                    </select>
+                    <label for="size-select-5">Choose a size:</label>
+                    <select id="size-select-5">
+                        <option>One Size</option>
+                    </select>
+                    <button class="add-to-cart" onclick="addToCart('Comfortable and Warm Socks')">Add to Cart</button>
+                    <button class="add-to-wishlist" onclick="addToWishlist('Comfortable and Warm Socks')">Add to
+                        Wishlist</button>
+                    <button class="show-cart" onclick="showcart()">Show Cart</button>
+                </div>
+
+                <div class="product-item">
+                    <a href="_images/scarf.jpg" data-lightbox="product-gallery" data-title="Womens Formal Wear">
+                        <img src="_images/scarf.jpg" alt="Womens Scarf" class="product-image">
+                    </a>
+                    <p class="product-name">Womens Scarf</p>
+                    <p class="product-price">R90</p>
+                    <p class="product-condition">Condition: Used - Average</p>
+                    <p class="product-description">Casual Comfy Scarf</p>
+                    <label for="color-select-6">Choose a color:</label>
+                    <select id="color-select-6">
+                        <option>Pink</option>
+                        <option>Brown</option>
+                        <option>Black</option>
+                        <option>Grey</option>
+                        <option>Red</option>
+                        <option>Blue</option>
+                        <option>White</option>
+                    </select>
+                    <label for="size-select-6">Choose a size:</label>
+                    <select id="size-select-6">
+                        <option>One Size</option>
+                    </select>
+                    <button class="add-to-cart" onclick="addToCart('Womens Scarf')">Add to Cart</button>
+                    <button class="add-to-wishlist" onclick="addToWishlist('Womens Scarf')">Add to Wishlist</button>
+                    <button class="show-cart" onclick="showcart()">Show Cart</button>
+                </div>
+
+            </div>
+        </section>
+
+        <script>
+            function addToCart(productName) {
+                let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+                cart.push(productName);
+                sessionStorage.setItem('cart', JSON.stringify(cart));
+                alert(productName + " has been successfully added to the cart.");
+            }
+
+            function addToWishlist(productName) {
+                alert(productName + " has been added to your wishlist.");
+            }
+
+            function showcart() {
+                window.location.href = 'cart.html';
+            }
+        </script>
+    </section>
+
+
+    <section id="about-us">
+        <h2>About Us</h2>
+        <div class="about-text">
+
+            <div class="section">
+                <h3>Introduction</h3>
+                <p>At Pastimes, we are dedicated to providing a sustainable and stylish shopping experience. Our curated
+                    collection of high-quality branded used clothing is designed for fashion-forward individuals who
+                    care about the environment.</p>
+            </div>
+
+            <div class="section">
+                <h3>Values</h3>
+                <p>We believe in integrity, sustainability, and community. Our commitment to ethical practices ensures
+                    that every item we sell has been responsibly sourced and given a second chance.</p>
+            </div>
+
+            <div class="section">
+                <h3>Culture</h3>
+                <p>Our culture is centered around creativity and inclusivity. We celebrate diversity and encourage
+                    everyone to express their unique style through fashion.</p>
+            </div>
+
+            <div class="section">
+                <h3>Mission</h3>
+                <p>Our mission is to make fashion sustainable and accessible. We aim to reduce waste in the fashion
+                    industry by promoting the reuse of clothing.</p>
+            </div>
+
+            <div class="section">
+                <h3>Vision</h3>
+                <p>We envision a world where fashion is not only about trends but also about sustainability. Our goal is
+                    to lead the way in promoting environmentally friendly practices in the fashion industry.</p>
+            </div>
+
+            <div class="section">
+                <h3>Background</h3>
+                <p>Founded in 2020, Pastimes began as a small initiative to promote the benefits of second-hand
+                    clothing. Over the years, we have grown into a trusted online store, known for our quality and
+                    commitment to sustainability.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Us Section -->
+    <section id="contact-us">
+        <h2 style="text-align: center; margin-top: 30px;">Contact Us</h2>
+
+        <!-- Contact Container -->
+        <div class="contact-container">
+
+            <!-- Contact Info Section -->
+            <div class="contact-info">
+                <!-- Address Section -->
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <span>
+                        <h5>Address</h5>
+                        19 Lyster Crescent, <br>
+                        Randpark Ridge, <br>
+                        Randburg, Johannesburg, 2169
+                    </span>
+                </div>
+
+                <!-- Phone Numbers Section -->
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <span>
+                        <h5>+27 71 721 0267 / +27 77 227 5931</h5>
+                    </span>
+                </div>
+
+                <!-- Email Section -->
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <span>
+                        <h5>pastimes23@gmail.com</h5>
+                        <p>Email us for any queries</p>
+                    </span>
+                </div>
+
+                <!-- Social Media Section -->
+                <div>
+                    <i class="fa fa-instagram"></i>
+                    <span>
+                        <h5>Instagram</h5>
+                        <a href="https://www.instagram.com/moni_que360" target="_blank">@moni_que360</a>
+                    </span>
+                </div>
+
+                <div>
+                    <i class="fa fa-facebook"></i>
+                    <span>
+                        <h5>Facebook</h5>
+                        <a href="https://www.facebook.com/pastime.fb/" target="_blank">Pastimes</a>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Message Us Section -->
+            <div class="contact-form">
+                <h2>Message Us</h2>
+                <form action="contact.php" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" required><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required><br>
+
+                    <label for="subject">Subject:</label>
+                    <input type="text" name="subject" id="subject" required><br>
+
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" required></textarea><br>
+
+                    <button type="submit" name="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Feedback if Submitted -->
+        <div id="feedback"></div>
+
+    </section>
+
+    <script>
+        // Handling form submission and providing feedback
+        document.querySelector('.contact-form form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && subject && message) {
+                document.getElementById('feedback').innerHTML = '<div class="success">Thank you, <strong>' + name + '</strong>. We have received your message.</div>';
+            } else {
+                document.getElementById('feedback').innerHTML = '<div class="error">Please fill in all fields correctly.</div>';
+            }
+        });
+    </script>
+
+
+    <footer>
+        <div id="footer-content">
+            <!-- Lets Connect -->
+            <div id="social-media-footer" class="footer-section">
+                <h4>Lets Connect</h4>
+                <div>
+                    <a href="https://www.instagram.com/moni_que360" target="_blank">
+                        <img src="_images/instagram_icon.jpg" alt="Instagram Icon" width="3%"> @moni_que360</a>
+                </div>
+                <div>
+                    <a href="https://www.facebook.com/pastime.fb/" target="_blank">
+                        <img src="_images/facebook_icon.jpg" alt="Facebook Icon" width="3%"> Facebook</a>
+                </div>
+                <!-- Email -->
+                <div>
+                    <p><a href="mailto:pastimes23@gmail.com">pastimes23@gmail.com</a></p>
+                </div>
+            </div>
+            <!-- Contact Information -->
+            <div id="contact-info-footer-left" class="footer-section">
+                <!-- Address -->
+                <div class="address">
+                    <h4><u>Address</u></h4>
+                    <p><img src="_images/location_icon.jpg" alt="Address Icon" width="5%"> 19 Lyster Crescent, <br>
+                        Randpark Ridge, <br>
+                        Randburg, Johannesburg, 2169</p>
+                </div>
+                <!-- Working Hours -->
+                <div class="working-hours">
+                    <h4><u>Working hours:</u></h4>
+                    <p class="no-break">Monday to Saturday: Open 24 hours</p>
+                    <p class="no-break">Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+        <p>
+            &copy; <span id="year"></span> - Pastimes | Last modified: <span id="last-modified"></span><br>
+            Powered by "Sustainable Fashion" Solutions
+        </p>
+
+        <script>
+            // Set the current year dynamically
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // Set the last modified date dynamically
+            const lastModified = new Date(document.lastModified);
+            const formattedDate = lastModified.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            document.getElementById('last-modified').textContent = formattedDate;
+        </script>
+
+    </footer>
+
+</body>
+
+</html>
