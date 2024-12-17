@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A professional and user-friendly temperature converter application that converts between Celsius, Fahrenheit, and Kelvin. Designed with responsive UI and efficient conversion logic.">
+    <meta name="keywords" content="temperature converter, Celsius to Fahrenheit, Fahrenheit to Kelvin, web tool, responsive UI, conversion logic, user-friendly design">
+    <meta name="revisit" content="30 days">
+    <meta http-equiv="refresh" content="30">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- Header Section -->
+<header>
+    <div class="header-container">
+        <div class="logo-container">
+            <img src="_images/temperature_converter_logo.png" alt="Temperature Converter Logo">
+        </div>
+        <h3>Welcome to the Temperature Converter! Easily convert between Celsius, Fahrenheit, and Kelvin.</h3>
+
+    </div>
+</header><br>
+
+
+    <div class="main-content  ">
+        <h1>Temperature Converter</h1>
+        <form id="converterForm">
+            <label for="tempInput">Enter Temperature:</label>
+            <input type="number" id="tempInput" placeholder="Enter temperature here..." required>
+
+            <label for="inputUnit">Convert From:</label>
+            <select id="inputUnit">
+                <option value="Celsius">Celsius (°C)</option>
+                <option value="Fahrenheit">Fahrenheit (°F)</option>
+                <option value="Kelvin">Kelvin (K)</option>
+            </select>
+
+            <label for="outputUnit">Convert To:</label>
+            <select id="outputUnit">
+                <option value="Celsius">Celsius (°C)</option>
+                <option value="Fahrenheit">Fahrenheit (°F)</option>
+                <option value="Kelvin">Kelvin (K)</option>
+            </select>
+
+            <button type="button" id="convertButton">Convert</button>
+        </form>
+
+        <div id="output" class="output"></div>
+        <div id="error" class="error"></div>
+    </div>
+
+    <script>
+        document.getElementById('convertButton').addEventListener('click', function () {
+            const tempInput = document.getElementById('tempInput').value;
+            const inputUnit = document.getElementById('inputUnit').value;
+            const outputUnit = document.getElementById('outputUnit').value;
+            const output = document.getElementById('output');
+            const error = document.getElementById('error');
+
+            // Clear previous output and error
+            output.textContent = '';
+            error.textContent = '';
+
+            if (!tempInput) {
+                error.textContent = 'Please enter a temperature.';
+                return;
+            }
+
+            const temp = parseFloat(tempInput);
+
+            let convertedTemp;
+            if (inputUnit === outputUnit) {
+                convertedTemp = temp;
+            } else if (inputUnit === 'Celsius' && outputUnit === 'Fahrenheit') {
+                convertedTemp = (temp * 9/5) + 32;
+            } else if (inputUnit === 'Celsius' && outputUnit === 'Kelvin') {
+                convertedTemp = temp + 273.15;
+            } else if (inputUnit === 'Fahrenheit' && outputUnit === 'Celsius') {
+                convertedTemp = (temp - 32) * 5/9;
+            } else if (inputUnit === 'Fahrenheit' && outputUnit === 'Kelvin') {
+                convertedTemp = ((temp - 32) * 5/9) + 273.15;
+            } else if (inputUnit === 'Kelvin' && outputUnit === 'Celsius') {
+                convertedTemp = temp - 273.15;
+            } else if (inputUnit === 'Kelvin' && outputUnit === 'Fahrenheit') {
+                convertedTemp = ((temp - 273.15) * 9/5) + 32;
+            }
+
+            if (convertedTemp !== undefined) {
+                output.textContent = `Converted Temperature: ${convertedTemp.toFixed(2)} °${outputUnit[0]}`;
+            } else {
+                error.textContent = 'Conversion failed. Please try again.';
+            }
+        });
+    </script><br><br>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Temperature Converter | Powered by Monique Industries</p>
+        <p>
+            <a href="https://www.instagram.com/moni_que360" target="_blank"><i class="fab fa-instagram"></i>
+                Instagram</a>
+            <a href="https://www.linkedin.com/in/vimbainashemonicamhangwa" target="_blank"><i
+                    class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/IIEMSA/poe-part-2-Vimbai-Monica" target="_blank"><i class="fab fa-github"></i>
+                GitHub</a>
+            <a href="mailto:vimbainashemhangwa@gmail.com" target="_blank"><i class="fa fa-envelope"></i>
+                vimbainashemhangwa@gmail.com</a>
+            <a href="tel:+27717210267"><i class="fa fa-phone"></i> +27 71 721 0267</a>
+        </p>
+        <p>Last updated: <span id="last-modified"></span></p>
+    </footer>
+
+    <script>
+        // Set the last modified date in the footer
+        document.getElementById("last-modified").textContent = document.lastModified;
+
+        // Function to perform the temperature conversion
+        function convertTemperature() {
+            let temp = document.getElementById("temperature").value;
+            let unit = document.getElementById("unit").value;
+            let result = '';
+
+            if (!temp) {
+                result = 'Please enter a valid temperature!';
+            } else {
+                switch (unit) {
+                    case 'Celsius':
+                        result = `${temp}°C = ${(temp * 9 / 5) + 32}°F = ${parseFloat(temp) + 273.15}K`;
+                        break;
+                    case 'Fahrenheit':
+                        result = `${temp}°F = ${(temp - 32) * 5 / 9}°C = ${((temp - 32) * 5 / 9) + 273.15}K`;
+                        break;
+                    case 'Kelvin':
+                        result = `${temp}K = ${temp - 273.15}°C = ${(temp - 273.15) * 9 / 5 + 32}°F`;
+                        break;
+                }
+            }
+
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

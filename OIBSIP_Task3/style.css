@@ -1,0 +1,138 @@
+/* General Styles*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:lightblue;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* ................................................................................................................................................................................. */
+
+/* Form  Styles*/
+
+label {
+    display: block;
+    margin: 20px 0 10px;
+    font-weight: bold;
+    color: #555;
+    
+}
+
+input, select, button {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: orangered;
+}
+.output {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+
+/* ................................................................................................................................................................................. */
+
+/* Header  Styles*/
+
+
+header {
+    background-color:#0b1320;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.header-container {
+    display: flex; /* Using flexbox for layout */
+    justify-content: space-between; /* Positions elements at the left and right edges */
+    align-items: center; /* Vertically centers items */
+    max-width: 1200px; /* Set a max width for the content */
+    margin: 0 auto; /* Center the content horizontally */
+}
+
+.logo-container img {
+    width: 160px; /* Adjust logo width */
+    height: auto; /* Maintain aspect ratio */
+    
+}
+/* ................................................................................................................................................................................. */
+
+
+/* Main Content Styles*/
+
+.main-content {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    width: 350px;
+   
+}
+
+
+/* ................................................................................................................................................................................. */
+
+/* Footer Styles*/
+
+
+footer {
+    background-color: #0b1320;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+footer a {
+    color:white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+footer span {
+    margin: 0 10px;
+}
+input, select, button {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+}
+#last-modified {
+    font-style: italic;
+}
+
+/* ................................................................................................................................................................................. */
+
+
