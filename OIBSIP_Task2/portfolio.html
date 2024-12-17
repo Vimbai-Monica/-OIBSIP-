@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Vimbainashe M. Mhangwa, aspiring Web Designer and Developer">
+    <meta name="keywords" content="portfolio, web design, web development, resume, projects, contact">
+    <meta name="revisit" content="30 days">
+    <meta http-equiv="refresh" content="30">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Vimbainashe M Mhangwa-Portfolio</title>
+    <link rel="stylesheet" href="css/lightbox.css" media="screen" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="javascript/jquery-1.10.2.min.js"></script>
+    <script src="javascript/lightbox-2.6.min.js"></script>
+    <script src="javascript/modernizr.custom.js"></script>
+</head>
+
+
+<body>
+
+    <header>
+
+        <!-- Navbar -->
+        <nav>
+            <a href="#about-me">About Me</a>
+            <a href="#resume">Resume</a>
+            <a href="#skills">My Skills</a>
+            <a href="#projects"> My Projects</a>
+            <a href="#contact">Contact Me</a>
+        </nav><br>
+    </header><br><br>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Vimbainashe M. Mhangwa</h1>
+            <p>I'm an aspiring Web Developer and Student at IIE MSA, Bachelor of Computer & Information Science</p>
+            <p>With a passion for creating innovative web solutions, I'm continuously learning new technologies to
+                enhance user experiences and solve real-world problems. I specialize in HTML, CSS, and JavaScript, and
+                am expanding my back-end skills with PHP.</p>
+            <p>As a lifelong learner, I aim to build meaningful web applications that empower people and businesses.
+                Currently, I am working on developing a portfolio to showcase my work and projects.</p>
+
+                <div class="cta-buttons" style="margin-top: 30px;">
+                    <a href="#projects" class="cta-button cta-button-primary">See My Work</a>
+                    <a href="#contact" class="cta-button cta-button-secondary">Contact Me</a>
+                </div>
+                
+        </div>
+    </section><br><br>
+
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Left Section: Picture and Introduction -->
+        <div class="left-section">
+            <a href="_images/me.jpg" data-lightbox="vimbai" data-title="My Picture"> <img src="_images/me.jpg"
+                    alt="My Picture" class="vimbai"> </a>
+            <h2>Vimbainashe M. Mhangwa</h2>
+            <p>Aspiring Web Developer | Student | Passionate about Learning and Technology</p>
+        </div>
+
+        <!-- Right Section: About Me, Resume, Projects -->
+        <div class="right-section">
+            <!-- About Me -->
+            <div class="about-me" id="about-me">
+                <h3 class="section-title">About Me</h3>
+                <p><strong>Age:</strong> 20</p>
+                <p><strong>Location:</strong> South Africa</p>
+                <p><strong>Currently Studying:</strong> Bachelor of Computer and Information Science at IIE MSA</p>
+            </div><br>
+
+            <!-- Resume -->
+            <div class="resume" id="resume">
+                <h3 class="section-title">Resume</h3>
+                <p>You can download my CV below to see my educational background, experience, and skills:</p>
+                <a href="VIMBAINASHE MHANGWA CV.pdf" download>Download My Resume</a>
+            </div><br>
+
+
+            <!-- Skills Section -->
+            <div class="skills" id="skills">
+                <h3 class="section-title">My Skills</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                </ul>
+            </div><br>
+
+
+            <!-- Projects -->
+            <div class="projects" id="projects">
+                <h3 class="section-title">My Projects</h3>
+                <p>You can download my projects here:</p>
+                <a href="https://github.com/IIEMSA/poe-part-2-Vimbai-Monica" target="_blank"><i
+                        class="fab fa-github"></i> GitHub</a><br>
+                <a href="Vimbainashe M Mhangwa Project.zip" download>Download My PHP Project</a><br>
+                <a href="Vimbainashe M Mhangwa Project 2.zip" download>Download My Project</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer id="contact">
+
+        <nav>
+            <a href="#about-me">About Me</a>
+            <a href="#resume">Resume</a>
+            <a href="#skills">My Skills</a>
+            <a href="#projects">My Projects</a>
+            <a href="#contact">Contact Me</a>
+        </nav><br>
+
+        <div>
+            <p>&copy; <span id="year"></span> Vimbainashe M. Mhangwa | <a
+                    href="mailto:vimbainashemhangwa@gmail.com">Contact Me</a> | Powered by Monique Industries</p>
+            <a href="https://www.instagram.com/moni_que360" target="_blank"><i class="fab fa-instagram"></i>
+                Instagram</a>
+            <a href="https://www.linkedin.com/in/vimbainashemonicamhangwa" target="_blank"><i
+                    class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/IIEMSA/poe-part-2-Vimbai-Monica" target="_blank"><i class="fab fa-github"></i>
+                GitHub</a>
+            <a href="mailto:vimbainashemhangwa@gmail.com" target="_blank"><i class="fa fa-envelope"></i>
+                vimbainashemhangwa@gmail.com</a>
+            <a href="tel:+27717210267"><i class="fa fa-phone"></i> +27 71 721 0267</a>
+            <!-- Last Modified Date -->
+            <p id="last-modified"></p>
+        </div>
+    </footer>
+
+    <script>
+        // Set the current year dynamically
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Set the last modified date dynamically
+        const lastModified = new Date(document.lastModified);
+        const formattedDate = lastModified.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+
+        // Display last modified date in the footer
+        document.getElementById('last-modified').textContent = `Last updated: ${formattedDate}`;
+    </script>
+
+</body>
+
+</html>

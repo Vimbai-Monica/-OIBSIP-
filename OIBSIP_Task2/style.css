@@ -1,0 +1,309 @@
+/* Header Styles */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    background: whitesmoke;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header nav {
+    margin-top: 0.5rem;
+}
+
+header nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+header nav a:hover {
+
+    text-decoration: underline;
+    /* Underline text on hover */
+    color: #ff6600;
+    /* Change color on hover */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+nav ul li {
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li:hover {
+    color: #00adb5;
+}
+
+/* ................................................................................................................................................................................. */
+
+
+/* Layout */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Left section (Picture and Intro) */
+.left-section {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.left-section img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20%;
+    border: 5px solid #333;
+}
+
+.left-section h2 {
+    font-size: 2em;
+    color: #333;
+    margin-top: 20px;
+}
+
+.left-section p {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* ................................................................................................................................................................................. */
+
+
+
+/* Right Section (About Me, Resume, Projects) */
+.right-section {
+    flex: 2;
+    min-width: 400px;
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.section-content {
+    margin-bottom: 30px;
+}
+
+.about-me,
+.resume,
+.skills,
+.projects {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-me p,
+.resume p,
+.skills p,
+.projects p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.skills ul {
+    list-style-type: none;
+    /* Removes default bullet points */
+    padding: 0;
+}
+
+.skills li {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #333;
+}
+
+/* ................................................................................................................................................................................. */
+
+
+
+/* Footer Section */
+footer {
+    background-color: whitesmoke;
+    /* Dark background color */
+    color: black;
+    /* White text color */
+    text-align: center;
+    /* Center align text */
+    padding: 20px;
+    /* Add padding inside footer */
+    margin-top: 50px;
+    /* Space between footer and main content */
+    width: 100%;
+    /* Ensure footer takes full width */
+    position: relative;
+    bottom: 0;
+}
+
+/* Footer Links */
+footer a {
+    color: black;
+    /* Black text for links */
+    text-decoration: none;
+    /* Remove underline */
+    font-weight: bold;
+    /* Make links bold */
+    margin: 0 15px;
+    /* Add space between links */
+    font-size: 16px;
+    /* Font size for links */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    /* Smooth transition for hover effects */
+    display: inline-block;
+    /* Make the links inline */
+
+}
+
+/* Hover Effect for Links */
+footer a:hover {
+    text-decoration: underline;
+    /* Underline text on hover */
+    color: #ff6600;
+    /* Change color on hover */
+}
+
+/* Footer Container */
+footer .contact-links {
+    text-align: center;
+    /* Center align the links */
+    margin-top: 20px;
+    /* Space above the contact links */
+}
+
+/* ................................................................................................................................................................................. */
+
+
+/* Hero Section */
+#hero {
+
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    position: relative;
+}
+
+#hero::before {
+    content: '';
+    background: #00adb5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.hero-content {
+    z-index: 1;
+    padding: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#hero h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+#hero p {
+    font-size: 20px;
+    margin-top: 10px;
+    max-width: 600px;
+}
+
+
+
+.cta-buttons {
+    margin-top: 30px;
+}
+
+.cta-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.cta-button-primary {
+    background-color: #ff6600;
+    margin-right: 20px;
+}
+
+.cta-button-secondary {
+    border: 2px solid white;
+}
+
+.cta-button:hover {
+    opacity: 0.8;
+}
+
+
+/* ................................................................................................................................................................................. */
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .right-section {
+        margin-top: 20px;
+    }
+}
+
+/* ................................................................................................................................................................................. */
